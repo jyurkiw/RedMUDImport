@@ -9,10 +9,8 @@ function importAll() {
     var filename = process.argv[2];
 
     if (filename !== null) {
-        var redis = require('redis');
-        var client = redis.createClient();
-
-        var lib = require('redmudlib')(client);
+        var lib = require('redmudlib')();
+        var client = lib.client.instance();
         var imp = require('./import-lib')(lib);
 
         imp.file.importAsync(filename)

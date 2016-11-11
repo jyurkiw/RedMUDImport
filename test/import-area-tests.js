@@ -3,12 +3,11 @@ var expect = chai.expect;
 var assert = require('assert');
 
 var redis = require('redis');
-//var constants = require('../lib/constants');
 
-var client = redis.createClient();
-
-var lib = require('redmudlib')(client);
+var lib = require('redmudlib')();
 var imp = require('../import-lib')(lib);
+
+var client = lib.client.instance();
 
 var koboldValleyArea = {
     areacode: "KDV",
@@ -69,7 +68,7 @@ describe('Basic area importing', function() {
         });
 
         it('Import a single area from an object.', function() {
-            return imp.object.importAsync(areaTestObj)
+            return imp.object.importAsync({ data: areaTestObj })
                 .then(function() {
                     return Promise.all([
                             lib.area.async.getAreas(),
@@ -87,7 +86,7 @@ describe('Basic area importing', function() {
 
         it('Check for import argument mangling.', function() {
             var mangleTestObj = Object.assign({}, areaTestObj);
-            return imp.object.importAsync(areaTestObj)
+            return imp.object.importAsync({ data: areaTestObj })
                 .then(function() {
                     expect(areaTestObj).to.deep.equal(mangleTestObj);
                 });
@@ -104,7 +103,7 @@ describe('Basic area importing', function() {
         });
 
         it('Import a single area from an object.', function() {
-            return imp.object.importAsync(areaTestObj)
+            return imp.object.importAsync({ data: areaTestObj })
                 .then(function(output) {
                     return Promise.all([
                             lib.area.async.getAreas(),
