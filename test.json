@@ -19,20 +19,30 @@
                     "areacode": "GCV",
                     "roomnumber": 1,
                     "name": "Cave Entrance",
-                    "description": "The opening to this dank cave reeks of Goblin."
+                    "description": "The opening to this dank cave reeks of Goblin.",
+                    "exits": {
+                        "east": "RM:KDV:1",
+                        "west": "RM:GCV:2"
+                    }
                 },
                 {
                     "areacode": "GCV",
                     "roomnumber": 2,
                     "name": "Narrow Corridor",
-                    "description": "The cave stretches on into the darkness."
+                    "description": "The cave stretches on into the darkness.",
+                    "exits": {
+                        "east": "RM:GCV:1"
+                    }
                 }
             ],
             "KDV": [{
                 "areacode": "KDV",
                 "roomnumber": 1,
                 "name": "Western Overlook",
-                "description": "A short cliff overlooks a small, fertile valley. You can see scores of Kobolds milling about doing whatever it is Kobolds do."
+                "description": "A short cliff overlooks a small, fertile valley. You can see scores of Kobolds milling about doing whatever it is Kobolds do.",
+                "exits": {
+                    "west": "RM:GCV:1"
+                }
             }]
         }
     }
