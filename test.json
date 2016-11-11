@@ -5,32 +5,32 @@
                 "areacode": "GCV",
                 "name": "Goblin Cave",
                 "description": "A cave filled with goblins.",
-                "size": 0
+                "size": 2
             },
             "KDV": {
                 "areacode": "KDV",
                 "name": "Kobold Valley",
                 "description": "A valley filled with dangerous Kobolds.",
-                "size": 0
+                "size": 1
             }
         },
         "rooms": {
             "GCV": [{
                     "areacode": "GCV",
-                    "roomnumber": "1",
+                    "roomnumber": 1,
                     "name": "Cave Entrance",
                     "description": "The opening to this dank cave reeks of Goblin."
                 },
                 {
                     "areacode": "GCV",
-                    "roomnumber": "2",
+                    "roomnumber": 2,
                     "name": "Narrow Corridor",
                     "description": "The cave stretches on into the darkness."
                 }
             ],
             "KDV": [{
                 "areacode": "KDV",
-                "roomnumber": "1",
+                "roomnumber": 1,
                 "name": "Western Overlook",
                 "description": "A short cliff overlooks a small, fertile valley. You can see scores of Kobolds milling about doing whatever it is Kobolds do."
             }]
