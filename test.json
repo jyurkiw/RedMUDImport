@@ -1,20 +1,29 @@
 {
     "data": {
         "areas": {
-            "GCV": {
-                "areacode": "GCV",
-                "name": "Goblin Cave",
-                "description": "A cave filled with goblins.",
-                "size": 2
-            },
             "KDV": {
                 "areacode": "KDV",
                 "name": "Kobold Valley",
                 "description": "A valley filled with dangerous Kobolds.",
                 "size": 1
+            },
+            "GCV": {
+                "areacode": "GCV",
+                "name": "Goblin Cave",
+                "description": "A cave filled with goblins.",
+                "size": 2
             }
         },
         "rooms": {
+            "KDV": [{
+                "name": "Western Overlook",
+                "roomnumber": 1,
+                "areacode": "KDV",
+                "description": "A short cliff overlooks a small, fertile valley. You can see scores of Kobolds milling about doing whatever it is Kobolds do.",
+                "exits": {
+                    "west": "RM:GCV:1"
+                }
+            }],
             "GCV": [{
                     "areacode": "GCV",
                     "roomnumber": 1,
@@ -34,16 +43,16 @@
                         "east": "RM:GCV:1"
                     }
                 }
-            ],
-            "KDV": [{
-                "areacode": "KDV",
-                "roomnumber": 1,
-                "name": "Western Overlook",
-                "description": "A short cliff overlooks a small, fertile valley. You can see scores of Kobolds milling about doing whatever it is Kobolds do.",
-                "exits": {
-                    "west": "RM:GCV:1"
-                }
-            }]
-        }
+            ]
+        },
+        "users": [{
+                "username": "testUser2",
+                "pwhash": "9b56ca8566a48b98a8c29a7fd307038ed555123439a937eb85d9c45166881e6e"
+            },
+            {
+                "username": "testUser1",
+                "pwhash": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"
+            }
+        ]
     }
 }
