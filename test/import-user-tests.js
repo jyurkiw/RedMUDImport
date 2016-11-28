@@ -31,6 +31,10 @@ var userData = {
 };
 
 describe('Import Users', function() {
+    after(function() {
+        return client.flushallAsync();
+    });
+
     it('Import two users', function() {
         return imp.object.importAsync({ data: userData })
             .then(function() {
