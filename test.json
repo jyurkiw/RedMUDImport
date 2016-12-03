@@ -53,6 +53,17 @@
                 "username": "testUser1",
                 "pwhash": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"
             }
+        ],
+        "characters": [{
+                "name": "Alder",
+                "owner": "testUser1",
+                "room": "RM:KDV:1"
+            },
+            {
+                "name": "Balder",
+                "owner": "testUser2",
+                "room": "RM:KDV:1"
+            }
         ]
     }
 }
